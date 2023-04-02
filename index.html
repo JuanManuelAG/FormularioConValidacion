@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FormularioConValidacion</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/index.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <!-- formulario Nombre-->
-        <form action="" class="formulario" id="formulario">
-            <div class="grupoFormulario" id="grupoUsuario">
-                <label for="nombre" class="formulariolabel">Nombre</label>
-                <div class="formularioUsuarioInput">
-                    <input type="text"class="formularioInput" name="nombre" id="nombre">
-                    <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
-                </div>
-                <p class="formularioInputError">El nombre solo puede contener letras y espacios</p>
-            </div>
-            <!-- formulario Apellido-->
-            <div class="grupoFormulario" id="grupoUsuario">
-                <label for="apellido" class="formulariolabel">Apellido</label>
-                <div class="formularioUsuarioInput">
-                    <input type="text"class="formularioInput" name="apellido" id="apellido">
-                    <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
-                </div>
-                <p class="formularioInputError">El apellido solo puede contener letras y espacios</p>
-            </div>
-             <!-- formulario correo electronico-->
-             <div class="grupoFormulario" id="grupoUsuario">
-                <label for="correo" class="formulariolabel">Correo Electronico</label>
-                <div class="formularioUsuarioInput">
-                    <input type="text"class="formularioInput" name="correo" id="correo" placeholder="correo@correo.com">
-                    <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
-                </div>
-                <p class="formularioInputError">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo</p>
-            </div>
-             <!-- formulario telefono-->
-             <div class="grupoFormulario" id="grupoUsuario">
-                <label for="telefono" class="formulariolabel">Telefono</label>
-                <div class="formularioUsuarioInput">
-                    <input type="text"class="formularioInput" name="telefono" id="telefono">
-                    <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
-                </div>
-                <p class="formularioInputError">El telefono solo puede contener numeros y el maximo son 14 digitos</p>
-            </div>
-        </form>
-        
-
+      <!-- formulario Nombre-->
+      <form action="" class="formulario" id="formulario">
+        <div class="grupoFormulario grupoFormulario-incorrecto" id="grupoUsuario">
+          <label for="nombre" class="formulariolabel">Nombre</label>
+          <div class="formularioGrupoInput">
+            <input
+              type="text"
+              class="formularioInput"
+              name="nombre"
+              id="nombre"
+            />
+            <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">
+            El nombre solo puede contener letras y espacios
+          </p>
+        </div>
+        <!-- formulario Apellido-->
+        <div class="grupoFormulario" id="grupoUsuario">
+          <label for="apellido" class="formulariolabel">Apellido</label>
+          <div class="formularioGrupoInput">
+            <input
+              type="text"
+              class="formularioInput"
+              name="apellido"
+              id="apellido"
+            />
+            <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">
+            El apellido solo puede contener letras y espacios
+          </p>
+        </div>
+        <!-- formulario correo electronico-->
+        <div class="grupoFormulario" id="grupoUsuario">
+          <label for="correo" class="formulariolabel">Correo Electronico</label>
+          <div class="formularioGrupoInput">
+            <input
+              type="text"
+              class="formularioInput"
+              name="correo"
+              id="correo"
+              placeholder="correo@correo.com"
+            />
+            <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guion bajo
+          </p>
+        </div>
+        <!-- formulario telefono-->
+        <div class="grupoFormulario" id="grupoUsuario">
+          <label for="telefono" class="formulariolabel">Telefono</label>
+          <div class="formularioGrupoInput">
+            <input
+              type="text"
+              class="formularioInput"
+              name="telefono"
+              id="telefono"
+            />
+            <i class="formularioValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">
+            El telefono solo puede contener numeros y el maximo son 14 digitos
+          </p>
+        </div>
+        <!-- Mensaje de Error-->
+        <div class="formularioMensajeError" id="formularioMensajeError">
+          <p>
+            <i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b>Por
+            favor rellena el formulario correctamente
+          </p>
+        </div>
+        <!-- Boton Enviar-->
+        <div class="grupoFormulario formulariobtnEnviar">
+          <button type="submit" class="formulariobtn">Enviar</button>
+          <p class="formularioMensajeExito" id="formularioMensajeExito">
+            Formulario enviado!
+          </p>
+        </div>
+      </form>
     </main>
-    <script src="https://kit.fontawesome.com/43109053cc.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/43109053cc.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
